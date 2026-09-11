@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html,
+body {
+  @apply m-0 p-0 bg-gray-100 text-gray-800;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+input[type='text'],
+input[type='date'],
+input[type='number'],
+textarea,
+select {
+  @apply w-full px-3 py-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:border-bankseta-dark focus:ring-2 focus:ring-bankseta-dark/10;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+button {
+  @apply font-medium rounded-lg cursor-pointer transition-all duration-200;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+button:hover:not(:disabled) {
+  @apply -translate-y-0.5;
+}
+
+button:active:not(:disabled) {
+  @apply scale-95;
+}
+
+.btn-primary {
+  @apply bg-bankseta-dark text-white px-4 py-3 w-full;
+}
+
+.btn-primary:disabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-transparent text-bankseta-dark border border-bankseta-dark px-4 py-3;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  @apply bg-bankseta-light;
+}
+
+.btn-success {
+  @apply bg-green-700 text-white px-4 py-3;
+}
+
+.btn-danger {
+  @apply bg-transparent text-red-600 border border-red-600;
+}
+
+.btn-danger:hover:not(:disabled) {
+  @apply bg-red-50;
+}
+
+.card {
+  @apply bg-gray-50 p-4 rounded-lg border border-gray-300 mb-4;
+}
+
+.card-blue {
+  @apply bg-purple-50 border-purple-200;
+}
+
+.card-green {
+  @apply bg-green-50 border-green-200;
+}
+
+.card-yellow {
+  @apply bg-yellow-50 border-yellow-200;
+}
+
+.progress-bar {
+  @apply bg-white border-b border-gray-300 px-6 py-4 sticky top-0 z-40;
+}
+
+.step {
+  @apply transition-all duration-300;
+}
+
+.fade-enter {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply bg-white;
+  }
+
+  .progress-bar,
+  .button-group {
+    @apply hidden;
+  }
+}
