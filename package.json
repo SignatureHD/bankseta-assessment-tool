@@ -1,0 +1,27 @@
+{
+  "name": "bankseta-assessment-tool",
+  "version": "1.0.0",
+  "description": "BANKSETA Special Projects Funding Assessment Tool for South African Credit Providers",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "zustand": "^4.4.0",
+    "html2pdf.js": "^0.10.1",
+    "react-hot-toast": "^2.4.1",
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}
